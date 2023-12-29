@@ -37,10 +37,12 @@ export class FizzBuzz {
 
 
     public checkFizzBuzzForAllNumbers(): void {
+        const resultHM: any = {};
         this.numbers.forEach((number) => {
             const result =  this.checkFizzBuzz(number);
-            console.log(`${number} ${result}`);
+            resultHM[number] = result;
         });
+        console.log(resultHM);
     }
 
     private checkIfANumberIsDividedByOther(number: number, dividedBy: number): boolean {
